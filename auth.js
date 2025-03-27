@@ -1,6 +1,6 @@
 export const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 export const CLIENT_ID = "7ec0d7200d794f2daa07e1d91aa919ac";
-export const REDIRECT_URI = "https://spotify-clone-two-wine-99.vercel.app/";
+export const REDIRECT_URI = "http://localhost:5173";
 export const SCOPES = [
   "streaming",
   "user-read-email",
