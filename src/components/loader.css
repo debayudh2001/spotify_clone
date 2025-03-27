@@ -1,0 +1,52 @@
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    gap: 1rem;
+}
+
+.spotify-loader {
+    animation: rotate 1s linear infinite;
+}
+
+.track {
+    fill: #282828;
+}
+
+.indicator {
+    fill: #1DB954;
+    transform-origin: center;
+    animation: progress 1s ease-in-out infinite;
+}
+
+.loading-text {
+    color: #b3b3b3;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+
+    50% {
+        stroke-dasharray: 50, 50;
+    }
+
+    100% {
+        stroke-dasharray: 100, 0;
+    }
+}
