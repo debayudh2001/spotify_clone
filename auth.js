@@ -1,8 +1,7 @@
 export const AUTH_ENDPOINT = import.meta.env.VITE_AUTH_ENDPOINT ;
 export const CLIENT_ID = import.meta.env.VITE_CLIENT_ID ;
-export const REDIRECT_URI = import.meta.env.PROD 
-  ? import.meta.env.VITE_PROD_REDIRECT_URI 
-  : import.meta.env.VITE_REDIRECT_URI;
+export const PROD_REDIRECT_URI = import.meta.env.VITE_PROD_REDIRECT_URI ;
+export const DEV_REDIRECT_URI = import.meta.env.VITE_DEV_REDIRECT_URI ;
 
 export const SCOPES = [
   "streaming",
@@ -18,4 +17,4 @@ export const SCOPES = [
   "app-remote-control"
 ];
 
-export const LOGIN_URL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=token&show_dialog=true`;
+export const LOGIN_URL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${PROD_REDIRECT_URI || DEV_REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=token&show_dialog=true`;
