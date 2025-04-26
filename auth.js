@@ -1,6 +1,9 @@
 export const AUTH_ENDPOINT = import.meta.env.VITE_AUTH_ENDPOINT ;
 export const CLIENT_ID = import.meta.env.VITE_CLIENT_ID ;
-export const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI ;
+export const REDIRECT_URI = import.meta.env.PROD 
+  ? import.meta.env.VITE_PROD_REDIRECT_URI 
+  : import.meta.env.VITE_REDIRECT_URI;
+
 export const SCOPES = [
   "streaming",
   "user-read-email",
