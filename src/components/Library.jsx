@@ -29,9 +29,11 @@ const Library = () => {
             Your Library
           </span>
         </div>
-        {myPlaylists.map((val, ind) => (
+        {myPlaylists.length !== 0 ?
+        myPlaylists.map((val, ind) => (
           <LibraryPC key={ind} data={val} />
-        ))}
+        )) : <span className="text-lg font-semibold text-[#f5f3f3]">Create playlists first</span>
+        }
       </div>
     </>
   );
