@@ -54,7 +54,7 @@ const Home = () => {
   return (
     <>
       <div className="w-[75%] h-[70vh] bg-[#121212] p-6 ml-4 rounded-xl flex flex-col gap-4 overflow-y-auto">
-        {albums.length !== 0 && artists.length !== 0 ? (
+        {/* {albums.length !== 0 && artists.length !== 0 ? (
           <>
             <span className="text-white text-3xl font-bold mb-1">
               New Releases
@@ -67,7 +67,27 @@ const Home = () => {
           </>
         ) : (
           <Loader />
-        )}
+        )} */}
+        <>
+          {albums.length !== 0 ? (
+            <>
+              <span className="text-white text-3xl font-bold mb-1">
+                New Releases
+              </span>
+              <SliderAl items={albums} />
+            </>
+          ) : (
+            <Loader />
+          )}
+          {artists.length !== 0 && (
+            <>
+              <span className="text-white text-3xl font-bold mb-1">
+                Followed Artists
+              </span>
+              <SliderAr items={artists} />
+            </>
+          )}
+        </>
       </div>
     </>
   );
