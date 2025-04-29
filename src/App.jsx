@@ -29,14 +29,14 @@ const App = () => {
       .find((elem) => elem.startsWith("access_token"))
       .split("=")[1];
 
-    window.location.hash = ""; // Clear the hash
+    window.location.hash = ""; 
     localStorage.setItem("token", token);
     setIsAuthenticated(true)
   }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [isAuthenticated])
+  // }, [isAuthenticated])
 
   const router = createBrowserRouter([
     {
